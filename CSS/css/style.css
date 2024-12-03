@@ -1,0 +1,105 @@
+* {
+  box-sizing: border-box;
+}
+
+/*headers*/
+.title-container {
+  font-family: "Snell Roundhand";
+  display: flex;
+  justify-content: center;
+}
+
+h3 {
+  font-weight: normal;
+  font-style: italic;
+}
+
+/*navbar*/
+nav {
+  grid-area: navbar;
+  border-bottom: 1.5px solid black;
+}
+
+.nav-list {
+  display: flex;
+  justify-content: space-around;
+  list-style-type: none;
+}
+
+.nav-link {
+  font-family: "Futura";
+  color: gray;
+  font-size: 24px;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.nav-link:hover {
+  text-decoration: underline;
+}
+
+/*articles*/
+article {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.article-title {
+  text-transform: capitalize;
+}
+
+p {
+  font-size: 9px;
+}
+
+/*layout*/
+.top-left-col {
+  grid-area: top-left-col;
+  border-top: 1.5px solid black;
+  border-right: 1.5px solid black;
+  border-bottom: 1.5px solid black;
+  padding: 10px;
+}
+
+.top-middle-col {
+  grid-area: top-middle-col;
+  border-top: 1.5px solid black;
+  border-right: 1.5px solid black;
+  border-left: 1.5px solid black;
+  border-bottom: 1.5px solid black;
+  padding: 10px;
+}
+
+.top-right-col {
+  grid-area: top-right-col;
+  border-top: 1.5px solid black;
+  border-bottom: 1.5px solid black;
+  border-left: 1.5px solid black;
+  padding: 10px;
+}
+
+.bottom-left-col {
+  grid-area: bottom-left-col;
+  border-top: 1.5px solid black;
+  border-right: 1.5px solid black;
+  padding: 10px;
+}
+
+.bottom-middle-left-col {
+  grid-area: bottom-middle-left-col;
+  border-top: 1.5px solid black;
+  border-left: 1.5px solid black;
+  padding: 10px;
+}
+
+.news {
+  border: 3px solid black;
+  margin: 0 100px 0 100px;
+  display: grid;
+  grid-template-columns: 30fr 40fr 30fr;
+  grid-template-areas:
+    "navbar                 navbar                      navbar"
+    "top-left-col        top-middle-col              top-right-col"
+    "bottom-left-col  bottom-middle-left-col   bottom-middle-left-col";
+}
