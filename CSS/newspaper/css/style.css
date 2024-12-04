@@ -54,6 +54,17 @@ p {
 }
 
 /*layout*/
+.news {
+  border: 3px solid black;
+  margin: 0 100px 0 100px;
+  display: grid;
+  grid-template-columns: 30fr 40fr 30fr;
+  grid-template-areas:
+    "navbar                 navbar                      navbar"
+    "top-left-col        top-middle-col              top-right-col"
+    "bottom-left-col  bottom-middle-left-col   bottom-middle-left-col";
+}
+
 .top-left-col {
   grid-area: top-left-col;
   border-top: 1.5px solid black;
@@ -91,15 +102,4 @@ p {
   border-top: 1.5px solid black;
   border-left: 1.5px solid black;
   padding: 10px;
-}
-
-.news {
-  border: 3px solid black;
-  margin: 0 100px 0 100px;
-  display: grid;
-  grid-template-columns: 30fr 40fr 30fr;
-  grid-template-areas:
-    "navbar                 navbar                      navbar"
-    "top-left-col        top-middle-col              top-right-col"
-    "bottom-left-col  bottom-middle-left-col   bottom-middle-left-col";
 }

@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Coffe Masters</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link href="./css/style.css" rel="stylesheet" />
+  </head>
+  <body>
+    <header>
+      <img
+        class="logo"
+        src="./img/coffee_masters_logo.png"
+        alt="coffee_masters_logo"
+        height="30px"
+      />
+      <h1>Canaima Coffee</h1>
+    </header>
+    <main class="order">
+      <section class="order-items grid-container">
+        <h3 class="section-title">Items</h3>
+        <article class="order-item">
+          <div class="quantity-item"><p>1x</p></div>
+          <div class="item-info">
+            <div class="name-item"><p>Cappucino</p></div>
+            <div class="desc-item"><p>Light foam</p></div>
+          </div>
+          <div class="price-item"><p>$6.00</p></div>
+        </article>
+        <article class="order-item">
+          <div class="quantity-item"><p>1x</p></div>
+          <div class="item-info">
+            <div class="name-item"><p>Cappucino</p></div>
+            <div class="desc-item">
+              <p>Almond Milk</p>
+              <p>Double espresso shot</p>
+            </div>
+          </div>
+          <div class="price-item"><p>$7.90</p></div>
+        </article>
+        <article class="order-item">
+          <div class="quantity-item"><p>1x</p></div>
+          <div class="item-info">
+            <div class="name-item"><p>Croissant</p></div>
+            <div class="desc-item"><p>butter</p></div>
+          </div>
+          <div class="price-item"><p>$5.37</p></div>
+        </article>
+      </section>
+      <section class="order-name grid-container">
+        <h3 class="section-title">Name</h3>
+        <div class="overlayed-input-container">
+          <label for="overlayed-input" class="overlayed-input-label"
+            >Name for order</label
+          >
+          <input id="name" class="overlayed-input" placeholder="" />
+        </div>
+      </section>
+      <section class="order-payment grid-container">
+        <h3 class="section-title">Payment</h3>
+        <div class="payment-inputs">
+          <div class="overlayed-input-container">
+            <label for="card-number" class="overlayed-input-label"
+              >Card Number</label
+            >
+            <input id="card-number" class="overlayed-input" placeholder="" />
+          </div>
+          <div class="short-overlayed-input-container">
+            <label for="CCV" class="overlayed-input-label">CCV Number</label>
+            <input id="CCV" class="overlayed-input" placeholder="" />
+          </div>
+        </div>
+      </section>
+    </main>
+    <section class="place-order">
+      <article class="totals">
+        <div class="subtotal">
+          <p>Subtotal:</p>
+          <p>$19.27</p>
+        </div>
+        <div class="taxes">
+          <p>Tax:</p>
+          <p>$0.96</p>
+        </div>
+        <div class="total">
+          <p>Total:</p>
+          <p>$20.23</p>
+        </div>
+      </article>
+      <button class="submit-order" type="submit">Place Order</button>
+    </section>
+  </body>
+</html>

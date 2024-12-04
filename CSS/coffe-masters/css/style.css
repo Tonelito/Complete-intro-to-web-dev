@@ -1,0 +1,192 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #efefef;
+  font-family: "Open Sans", sans-serif;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  background-color: #43281c;
+}
+
+h1 {
+  font-size: 26px;
+  color: #fbf2c0;
+}
+
+/*order*/
+.section-title {
+  font-size: 16px;
+  font-weight: normal;
+  text-transform: uppercase;
+  color: #885a2d;
+}
+
+.order {
+  display: grid;
+  margin: 30px;
+  gap: 30px;
+  grid-template-columns: 50fr 50fr;
+  grid-template-areas:
+    "order-items  order-name"
+    "order-items  order-payment";
+}
+
+.grid-container {
+  padding: 15px;
+  box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+  background-color: #eee1d5;
+}
+
+.order-items {
+  grid-area: order-items;
+}
+
+.order-name {
+  grid-area: order-name;
+}
+
+.order-payment {
+  grid-area: order-payment;
+}
+
+/*items*/
+.order-item {
+  display: grid;
+  padding-bottom: 15px;
+  border-bottom: 2px solid #ddb892;
+  grid-template-columns: 3fr 20fr 3fr;
+  grid-template-areas: "quantity-item   name-item   price-item";
+}
+
+.name-item p,
+.price-item p {
+  font-weight: bold;
+}
+
+.desc-item p {
+  font-size: 14px;
+  text-transform: capitalize;
+  margin: 0;
+  color: #b08968;
+}
+
+.item-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.quantity-item {
+  grid-area: quantity-item;
+}
+
+.name-item {
+  grid-area: name-item;
+}
+
+.price-item {
+  grid-area: price-item;
+}
+
+.desc-item {
+  grid-area: desc-item;
+}
+
+/*inputs*/
+.overlayed-input-container {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+}
+
+.short-overlayed-input-container {
+  position: relative;
+  display: inline-block;
+  max-width: 200px;
+}
+
+.overlayed-input-label {
+  color: #885a2d;
+  background-color: #eee1d5;
+  font-size: 11px;
+  position: absolute;
+  left: 25px;
+  top: -7px;
+  padding: 0 2px;
+}
+
+.overlayed-input {
+  background-color: rgba(0, 0, 0, 0);
+  border-color: #885a2d;
+  border-radius: 20px;
+  text-indent: 18px;
+  font-size: 16px;
+  padding: 8px;
+  width: 100%;
+}
+
+.payment-inputs {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/*place-order*/
+.place-order {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 30px;
+  gap: 20px;
+}
+
+.totals {
+  display: flex;
+  flex-direction: column;
+}
+
+.subtotal,
+.taxes,
+.total {
+  display: flex;
+  width: 500px;
+  justify-content: space-between;
+}
+
+.total p {
+  font-weight: bold;
+}
+
+.submit-order {
+  font-size: 16px;
+  background-color: #deb993;
+  border: none;
+  border-radius: 20px;
+  width: 100%;
+  padding: 10px;
+}
+
+@media screen and (max-width: 768px) {
+  .order {
+    grid-template-columns: 100fr;
+    grid-template-areas:
+      "order-items"
+      "order-name"
+      "order-payment";
+  }
+  .subtotal,
+  .taxes,
+  .total {
+    display: flex;
+    width: 250px;
+    justify-content: space-between;
+  }
+}
