@@ -1,0 +1,171 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --font-size: 42px;
+  --font-btn: 32px;
+  --white: #ffffff;
+  --black: #000000;
+  --gray: #d8d9db;
+  --orange: #dd8d37;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: gray;
+  font-family: sans-serif;
+}
+
+.app {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  height: 100vh;
+}
+
+/* display */
+.display {
+  display: flex;
+  justify-content: flex-end;
+  padding: 25px;
+  background-color: var(--black);
+}
+
+.display p {
+  color: var(--white);
+  font-size: var(--font-size);
+}
+
+/* calculator grid */
+.calculator {
+  width: 400px;
+  display: grid;
+  grid-template-columns: 25fr 25fr 25fr 25fr;
+  grid-template-areas:
+    "display    display     display     display"
+    "c-btn      c-btn       arrow-btn   dvsn-btn"
+    "seven-btn  eight-btn   nine-btn    mult-btn"
+    "four-btn   five-btn    six-btn     minus-btn"
+    "one-btn    two-btn     three-btn   plus-btn"
+    "zero-btn   zero-btn    zero-btn    equal-btn";
+}
+
+.display {
+  grid-area: display;
+}
+
+.c-btn {
+  grid-area: c-btn;
+}
+
+.arrow-btn {
+  grid-area: arrow-btn;
+}
+
+.dvsn-btn {
+  grid-area: dvsn-btn;
+}
+
+.seven-btn {
+  grid-area: seven-btn;
+}
+
+.eight-btn {
+  grid-area: eight-btn;
+}
+
+.nine-btn {
+  grid-area: nine-btn;
+}
+
+.mult-btn {
+  grid-area: mult-btn;
+}
+
+.four-btn {
+  grid-area: four-btn;
+}
+
+.five-btn {
+  grid-area: five-btn;
+}
+
+.six-btn {
+  grid-area: six-btn;
+}
+
+.minus-btn {
+  grid-area: minus-btn;
+}
+
+.one-btn {
+  grid-area: one-btn;
+}
+
+.two-btn {
+  grid-area: two-btn;
+}
+
+.three-btn {
+  grid-area: three-btn;
+}
+
+.plus-btn {
+  grid-area: plus-btn;
+}
+
+.zero-btn {
+  grid-area: zero-btn;
+}
+
+.equal-btn {
+  grid-area: equal-btn;
+}
+
+/* buttons */
+.calc-btn {
+  background: none;
+  border: 1.5px solid black;
+  cursor: pointer;
+  font-size: var(--font-size);
+  height: 100px;
+}
+
+/* button colors */
+.gray-btn {
+  background-color: var(--gray);
+}
+
+.gray-btn:hover {
+  background-color: #ebebeb;
+}
+.gray-btn:active {
+  background-color: #bbbcbe;
+}
+
+.orange-btn {
+  background-color: var(--orange);
+  border-right: none;
+  color: var(--white);
+}
+
+.orange-btn:hover {
+  background-color: #dfb07e;
+}
+
+.orange-btn:active {
+  background-color: var(--orange);
+}
+
+.left-btn {
+  border-left: none;
+}
+
+.bottom-btn {
+  border-bottom: none;
+}
